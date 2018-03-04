@@ -56,8 +56,8 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
-        'APP_DIRS': False,
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),],#[],
+        'APP_DIRS': False,#True,#
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -123,4 +123,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+LOGIN_REDIRECT_URL = '/blog/'
 
